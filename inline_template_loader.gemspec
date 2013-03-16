@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('rspec', '~> 2.13.0')
   gem.add_development_dependency('guard-rspec', '~> 2.5.0')
   gem.add_development_dependency('rb-readline', '~> 0.4.2')
+  gem.add_development_dependency('rb-fsevent', '~> 0.9')
 end
