@@ -1,6 +1,11 @@
 require 'inline_template_loader'
 
 describe 'InlineTemplateLoader' do
+  let(:fixtures_dir)  { File.expand_path('../fixtures', File.dirname(__FILE__)) }
+  let(:external_file) { fixtures_dir + '/external_file.rb' }
+  let(:external_file) { fixtures_dir + '/external_file.rb' }
+  let(:external_file_without_templates) { fixtures_dir + '/external_file_without_templates.rb' }
+
   describe '#load' do
     context 'from this file' do
       shared_examples_for 'load templates correctly from this file' do
@@ -25,9 +30,6 @@ describe 'InlineTemplateLoader' do
         it { should == {foo: "This is an external file\n"} }
       end
 
-      let(:fixtures_dir)  { File.expand_path('../fixtures', File.dirname(__FILE__)) }
-      let(:external_file) { fixtures_dir + '/external_file.rb' }
-
       context 'with filepath' do
         subject { InlineTemplateLoader.load(external_file) }
 
@@ -43,6 +45,12 @@ describe 'InlineTemplateLoader' do
 
         it_behaves_like 'load templates correctly from external file'
       end
+    end
+
+    context 'from external file without templates' do
+      subject { InlineTemplateLoader.load(external_file_without_templates) }
+
+      it { should == {} }
     end
   end
 end
