@@ -33,6 +33,16 @@ describe 'InlineTemplateLoader' do
 
         it_behaves_like 'load templates correctly from external file'
       end
+
+      context 'with module uses inline template loader' do
+        before do
+          require external_file
+        end
+
+        subject { DslUsesInlineTemplateLoader.templates }
+
+        it_behaves_like 'load templates correctly from external file'
+      end
     end
   end
 end
