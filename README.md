@@ -21,7 +21,7 @@ Or install it yourself as:
 ```ruby
 require 'inline_template_loader'
 
-templates = InlineTemplateLoader.load(__FILE__)
+templates = InlineTemplateLoader.load
 
 puts templates[:foo]
 puts templates[:bar]
