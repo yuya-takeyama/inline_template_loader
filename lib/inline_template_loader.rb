@@ -1,9 +1,17 @@
 require "inline_template_loader/version"
 
 module InlineTemplateLoader
-  def self.load(file = nil)
-    if file.nil?
-      file = caller.first.split(':').first
+  def self.load(arg = nil)
+    if arg.is_a? ::Integer
+      caller_pos = arg
+    elsif
+      caller_pos = 0
+    end
+
+    if arg.is_a? ::String
+      file = arg
+    elsif
+      file = caller[caller_pos].split(':').first
     end
 
     templates = {}
