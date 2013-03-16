@@ -1,7 +1,7 @@
 require File.expand_path('./dsl_uses_inline_template_loader', File.dirname(__FILE__))
 
 DslUsesInlineTemplateLoader.dsl do
-  load_template :foo
+  load_template
 end
 
 __END__
