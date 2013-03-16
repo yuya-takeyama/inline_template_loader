@@ -1,7 +1,7 @@
 require "inline_template_loader/version"
 
 module InlineTemplateLoader
-  def self.load_inline_template(file)
+  def self.load(file)
     templates = {}
     sym = nil
 
