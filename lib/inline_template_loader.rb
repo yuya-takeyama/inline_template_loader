@@ -10,7 +10,7 @@ module InlineTemplateLoader
 
     if arg.is_a? ::String
       file = arg
-    elsif
+    else
       file = caller[caller_pos].split(':').first
     end
 
