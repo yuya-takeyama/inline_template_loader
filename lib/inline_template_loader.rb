@@ -4,7 +4,7 @@ module InlineTemplateLoader
   def self.load(arg = nil)
     if arg.is_a? ::Integer
       caller_pos = arg
-    elsif
+    else
       caller_pos = 0
     end
 
