@@ -1,1 +1,1 @@
--c -fd
+-fd -c --require=spec_helper

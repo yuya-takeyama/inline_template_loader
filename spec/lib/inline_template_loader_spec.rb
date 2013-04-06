@@ -1,5 +1,3 @@
-require 'inline_template_loader'
-
 describe 'InlineTemplateLoader' do
   let(:fixtures_dir)  { File.expand_path('../fixtures', File.dirname(__FILE__)) }
   let(:external_file) { fixtures_dir + '/external_file.rb' }
