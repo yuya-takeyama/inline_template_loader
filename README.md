@@ -1,5 +1,8 @@
 # InlineTemplateLoader
 
+[![Build Status](https://travis-ci.org/yuya-takeyama/inline_template_loader.png?branch=master)](https://travis-ci.org/yuya-takeyama/inline_template_loader)
+[![Coverage Status](https://coveralls.io/repos/yuya-takeyama/inline_template_loader/badge.png?branch=master)](https://coveralls.io/r/yuya-takeyama/inline_template_loader)
+
 Loads Sinatraish inline template
 
 ## Installation

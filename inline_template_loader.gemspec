@@ -19,4 +19,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('guard-rspec', '~> 2.5.0')
   gem.add_development_dependency('rb-readline', '~> 0.4.2')
   gem.add_development_dependency('rb-fsevent', '~> 0.9')
+  gem.add_development_dependency "coveralls", "~> 0.6.4"
 end
